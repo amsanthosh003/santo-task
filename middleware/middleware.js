@@ -17,7 +17,7 @@ const statusRouter=require('./../router/status');
  
 let db= process.env.MONGODB_URL ||'mongodb+srv://santhosh:Santhosh333@cluster0.fmann.mongodb.net/Taskmanagement?retryWrites=true&w=majority';
 
-console.log('connected to the database',db);
+console.log('connected tooo the database',db);
 
 mongoose.connect(db, {  useUnifiedTopology: true,  useNewUrlParser: true },function(error)
 {
