@@ -39,34 +39,6 @@ class adminController {
         }
     }
 
-	
-
- /*   async login1(name,password){
-       
-        try{
-            let student = await adminSchema.findOne({
-                name: name,
-                password: password,
-            });
-
-            if(!student){
-                throw new Error('invalid creds');
-            }
-
-            return {
-                status: "1",
-                msg: "Login Sucessfully",
-                user
-            };
-
-        } catch(error){
-            return {
-                status: '0',
-                msg: 'username or password invalid'
-            }
-        }
-    }  */
-
     async add(farm){
 		try{
 			let response = await adminSchema.create(farm);
@@ -83,10 +55,10 @@ class adminController {
 
             try{
                 let response = await adminSchema.find({});
-                let count=Object.keys(response).length;// obj.key() =returns object in array.(count=[].length)
+              //  let count=Object.keys(response).length;// obj.key() =returns object in array.(count=[].length)
                 return {
                     response: response,
-                    count
+                 //   count
                 };
             } catch(error){
                 return {

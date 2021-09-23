@@ -6,7 +6,7 @@ class employeeController{
 	async add(farm){
 		try{
 			let response = await employeeSchema.create(farm);
-			return { status: "success",   msg:"class Added successfully",
+			return { status: "success",   msg:"employee Added successfully",
 			          result: response, message: "Added Successfully" };
 		   }
 	    catch(error){
@@ -89,7 +89,7 @@ class employeeController{
 
         try {
             let response = await employeeSchema.update({_id: id}, body);
-            return { status: "success", msg:"class Updated successfully",result: response, message: "Updated Successfully" };
+            return { status: "success", msg:"employee Updated successfully",result: response, message: "Updated Successfully" };
 
         } catch (error) {
             return { status: "error", error: error };

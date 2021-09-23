@@ -6,7 +6,7 @@ class taskController{
 	async add(farm){
 		try{
 			let response = await taskSchema.create(farm);
-			return { status: "success",   msg:"class Added successfully",
+			return { status: "success",   msg:"task Added successfully",
 			          result: response, message: "Added Successfully" };
 		   }
 	    catch(error){
@@ -57,8 +57,7 @@ class taskController{
 				return {
 					response: response,
 				
-				};
-			
+				};	
 			
 		} catch(error){
 			return {
@@ -87,7 +86,7 @@ class taskController{
 
         try {
             let response = await taskSchema.update({_id: id}, body);
-            return { status: "success", msg:"class Updated successfully",result: response, message: "Updated Successfully" };
+            return { status: "success", msg:"task Updated successfully",result: response, message: "Updated Successfully" };
 
         } catch (error) {
             return { status: "error", error: error };
