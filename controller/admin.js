@@ -2,14 +2,15 @@ const adminSchema = require('./../model/admin');
 const errorHandler = require('./../utils/error.handler');
 
 
-class adminController {
+class AdminController {
 
 
-    async register(newadmin){
+    async register(newGender){
         try{
-             await adminSchema.create(newadmin);
-        return {  status: 'success',
-                msg: 'User created'}    
+             await adminSchema.create(newGender);
+        return {  
+                status: 'success',
+                msg: 'User created'  }    
            }
         catch(err){
             return { status: 'error',
@@ -19,17 +20,21 @@ class adminController {
     async login(responce){
         let name =responce.name;
         let password=responce.password;
-        try{ let student = await adminSchema.findOne({
-                name: name,
-                password: password });
 
-        if(!student) {
+        try{
+             let admin = await adminSchema.findOne({
+                name: name,
+                password: password 
+            });
+
+        if(!admin) {
+
                 throw new Error('invalid creds');  }
 
         return {
                 status: "1",
                 msg: "Login Sucessfully",
-                user
+                admin
             };
         } catch(error){
             return {
@@ -109,4 +114,4 @@ class adminController {
 }
 
 
-module.exports=new adminController();
+module.exports=new AdminController();
