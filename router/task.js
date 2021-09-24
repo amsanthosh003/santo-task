@@ -26,21 +26,5 @@ router.put('/update', async (req, res) => {
 	res.send(response);
 })
 
-  router.get('/match', async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	const response = await taskController.match();
-	res.send(response);
-})
-  router.get('/sort', async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	const response = await  taskController.sort();
-	res.send(response);
-})    
-
-router.get('/search', async (req, res) => {
-	const response = await taskController.search(req.query.name);
-	res.send(response);
-})
-
 
 module.exports = router;
