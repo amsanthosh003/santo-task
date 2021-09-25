@@ -15,7 +15,7 @@ const statusRouter=require('./../router/status');
 
 //  let db= process.env.MONGODB_URL ||`mongodb+srv://admin:admin123@cluster0.qcrci.mongodb.net/schoolsms?retryWrites=true&w=majority`;
  
-let db= process.env.MONGODB_URL ||'mongodb+srv://santhosh:Santhosh333@cluster0.fmann.mongodb.net/Taskmanagement?retryWrites=true&w=majority';
+let db= process.env.MONGODB_URL ||'mongodb+srv://amsanthosh003:Santhosh!!!333@cluster0.nld0h.mongodb.net/Taskmanagement?retryWrites=true&w=majority';
 
 console.log('connected to the database',db);
 
